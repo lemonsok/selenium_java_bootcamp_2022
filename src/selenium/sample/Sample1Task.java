@@ -2,6 +2,7 @@ package selenium.sample;
 
 
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -14,9 +15,17 @@ public class Sample1Task {
     public void goToHomepage() throws Exception {
 //        TODO:
 //         define driver
-//         go to https://kristinek.github.io/site/index2.html
-//         get title of page
 //         get URL of current page
 //         close browser
+
+        System.setProperty("webdriver.chrome.driver" , " C:\\Users\\allo2\\Desktop\\selenium_java_basic\\lib\\chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://kristinek.github.io/site/index2.html");
+        System.out.println("Title: " + driver.getTitle());
+        System.out.println("URL" + driver.getCurrentUrl());
+        driver.quit();
+
+
+
     }
 }
